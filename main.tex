@@ -6,87 +6,78 @@
 
 \documentclass[10pt,a4paper]{altacv}
 
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages. 
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%% 
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you'll need to install
-%% Academicons.ttf in your operating system's font %% folder.
-
-
-% Change the page layout if you need to
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
 
-% Change the font if you want to.
 \setmainfont{Lato}
 
-% Change the colours if you want to
-\definecolor{VividPurple}{HTML}{3E0097}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\definecolor{DarkBrown}{HTML}{3F2A14}
-\definecolor{Gold}{HTML}{FFD700}
-%\colorlet{heading}{VividPurple}
-\colorlet{heading}{DarkBrown}
-\colorlet{heading-line}{Gold}
-\colorlet{accent}{DarkBrown}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
+% \definecolor{GreyGrey}{HTML}{839192}
+% \definecolor{VividPurple}{HTML}{3E0097}
+% \definecolor{PitchBlack}{HTML}{17202A}
 
-% Change the bullets for itemize and rating marker
-% for \cvskill if you want to
+
+\definecolor{PitchBlack}{HTML}{17202A} 
+\definecolor{Purple}{HTML}{6C3483}
+
+\colorlet{heading}{PitchBlack}
+\colorlet{heading-line}{Purple}
+\colorlet{accent}{PitchBlack}
+\colorlet{emphasis}{PitchBlack}
+\colorlet{body}{PitchBlack} % brödtext
+
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-%% sample.bib contains your publications
 \addbibresource{sample.bib}
 
 \begin{document}
 \name{Gus Matic Johansson}
 \tagline{Student}
-% Cropped to square from my github page
+
 \photo{2,5cm}{12628502.jpeg}
-\personalinfo{%
-  % You can add your own with \printinfo{symbol}{detail}
-  \email{johanssongus@gmail.com}}
+
+\personalinfo{
+  \email{johanssongus@gmail.com}
   \phone{+46707904763}
   \location{Gothenburg, Sweden}
   \linkedin{linkedin.com/in/gusjohansson}
 %  \homepage{gusjohansson.se}
+}
 
-%% Make the header extend all the way to the right, if you want. Extend the right margin by 8cm (=6.8cm marginparwidth + 1.2cm marginparsep)
 \begin{adjustwidth}{}{-8cm}
 \makecvheader
 \end{adjustwidth}
 
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
+% Här börjar vänsterspalten:
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{Consultant/Assistant Teacher | Part-Time}{ZoCom AB}{August 2016 -- Ongoing}{Gothenburg, Sweden}{Assisting teacher for IT related education, I held lectures and laborations regarding IT security. My area was access control, including Active Directory, Cisco 5505, Ubuntu \& Windows 7-based access control software.}
+% \input{page1sidebar} 
+% \cvsection{Experience}
 
-\divider
 
-\cvevent{IT Technician | Part-Time}{March 2015 -- April 2016}{Gothenburg, Sweden}{Addskills Cornerstone AB}{My duties included deployment of operating systems and software, using a Windows Server environment, for courses as well as maintenance for all IT at the Gothenburg office.}
+% \cvevent{Titel}{Företag}{Datum}{Geografisk position}{Text}
 
-\divider
-
-\cvevent{Co-worker | Full-Time}{Systembolaget}{April 2015 -- August 2015}{Uddevalla, Sweden}{A longer version of summer vacation work, everything from cashier, organizing, serving customers and making sure the store is in top shape.}
+\cvevent{Consultant/Assistant Teacher | Part-Time}{ZoCom AB}{August 2016 -- Ongoing}{Gothenburg, Sweden}{Assisting teacher for IT related education, with lectures and laborations regarding IT security. My area was access control, including Active Directory, Cisco 5505, Ubuntu \& Windows 7-based access control software.}
 
 \divider
 
 \cvevent{Bartender | Full \& Part-Time}{Nightclubs \& Restaurants}{November 2011 -- August 2016}{Australia \& Sweden}{I started my carreer as a bartender in Brisbane, Australia where I stayed for a year. When I later moved back to Sweden I kept working as a bartender on weekends during my studies.}
 
+
 \divider
 
+
+\cvevent{IT Technician | Part-Time}{Addskills Cornerstone AB}{March 2015 -- April 2016}{Gothenburg, Sweden}{My duties included deployment of operating systems and software, using a Windows Server environment, for courses as well as maintenance for all IT at the Gothenburg office.}
+
+
+\divider
+
+
+\cvevent{Co-worker | Full-Time}{Systembolaget}{April 2015 -- August 2015}{Uddevalla, Sweden}{A longer version of summer vacation work, everything from cashier, organizing, serving customers and making sure the store is in top shape.}
+
+
+% Här börjar Other
+
 \cvsection{Other}
-
-\nocite{*}
-
-%\printbibliography[heading=pubtype,title={\printinfo{\faMusic}{Words, Beats, \& Life, Inc}},type=misc]
 
 \cvevent{Board Member}{Uddevalla Rugby}{August 2015 -- August 2016}{Uddevalla, Sweden}{Together with the rest of the board I organised events for branding as well as gathering money. I was also assisting with coaching. }
 
@@ -97,5 +88,8 @@
 
 \clearpage
 
-%\cvsection[page2sidebar]{Volunteer}
+% Ifall man vill ha en sida 2:
+% \cvsection[page2sidebar]{Publications}
+
+
 \end{document}
